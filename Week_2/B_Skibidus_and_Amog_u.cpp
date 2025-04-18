@@ -14,9 +14,13 @@ int main()
         string s;
         cin >> s;
 
-        
+        // for (int i = 0; i < s.size() - 2; i++)
 
-        
+        //     cout << s[i];
+        // cout << 'i' << endl;
+
+        cout << s.substr(0, s.size() - 2) + 'i' << endl;;
     }
+
     return 0;
 }
