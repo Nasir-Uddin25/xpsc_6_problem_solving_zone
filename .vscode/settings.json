@@ -7,6 +7,7 @@
         "list": "cpp",
         "deque": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "random": "cpp"
     }
 }

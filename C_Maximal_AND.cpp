@@ -16,7 +16,6 @@ int main()
         cin >> a[i];
         maxSetBit = max(maxSetBit, __lg(a[i]));
     }
-    // cout << maxSetBit << endl;
 
     //     16 8 4 2 1
     // 4 -> 0 0 1 0 0
@@ -27,8 +26,20 @@ int main()
     // 6 -> 0 0 1 1 0
     // 12 ->0 1 1 0 0
 
+    int ans = 0, AND = (1LL << 31) - 1;
+    // cout << __lg(AND) << endl;
+    // for (int k = __lg(AND); k >= 0; k--)
+    // {
+    //     if ((AND >> k) & 1)
+    //         cout << 1 << " ";
+    //     else
+    //         cout << 0 << " ";
+    // }
+    
     for (int i = 0; i < n; i++)
     {
+        AND &= a[i];
+
         cout << a[i] << " -> ";
         for (int k = maxSetBit; k >= 0; k--)
         {
@@ -40,5 +51,6 @@ int main()
         cout << endl;
     }
 
+    cout << AND << endl;
     return 0;
 }
